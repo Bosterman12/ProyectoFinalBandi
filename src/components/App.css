@@ -1,0 +1,33 @@
+.cardProducto{
+  width: 18rem;
+  margin: 4px;
+  background-color: hsl(0, 0, 97%);
+}
+
+
+
+.cardProductos{
+  margin: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBody{
+  background-color: seagreen;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.conForm{
+  margin-top: 20px;
+}
+
+img {
+  margin-top: 3px;
+}
+
+.itemDetail{
+  margin-top: 20px;
+  max-width: 760px;
+  
+}
