@@ -1,6 +1,9 @@
 import React from 'react';
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 export const Ckeckout = () => {
+        let navigate = useNavigate()
 
         const datosForm = useRef()
 
@@ -11,6 +14,20 @@ export const Ckeckout = () => {
             console.log(data)
             const cliente = Object.fromEntries(data)
             console.log(cliente)
+            e.target.reset()
+            toast('🦄 Muchas gracias por comprar con nosotros!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            toast.success("Muchas gracias por realizar su compra")
+            navigate("/")
+            
         }
 
     return (

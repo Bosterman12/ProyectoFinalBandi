@@ -2,12 +2,17 @@ import React from 'react';
 import { Cartwidget } from '../Cartwidget/Cartwidget';
 import { Categorias } from './Categorias/Categorias';
 import { Secciones } from './Secciones/Secciones';
+import { BotonDarkMode } from './BotonDarkMode/BotonDarkMode';
+import { useDarkmodeContext } from '../../context/DarkModeContext';
 
 
-export const Navbar = ({nombre}) => {
+export const Navbar = () => {
+
+  const{darkMode} = useDarkmodeContext()
     return (
-        
-          <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    
+      <nav className={`navbar navbar-expand-lg ${darkMode ? "navbar-dark bg-primary" : "bg-light"}`}
+      >
     <div className="container-fluid">
       
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +25,7 @@ export const Navbar = ({nombre}) => {
           <Categorias/>
         </ul>
         <Cartwidget cantCarrito={10}/>
-        
+        <BotonDarkMode/>
       </div>
     </div>
   </nav>  

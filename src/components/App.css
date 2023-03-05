@@ -13,13 +13,25 @@
 }
 
 .cardBody{
-  background-color: seagreen;
+  
   margin-bottom: 3px;
+  text-align: center;
+}
+
+.cardBodyDark{
+  background-color: black;
+  color: gainsboro;
+  margin-top: 3px;
   text-align: center;
 }
 
 .conForm{
   margin-top: 20px;
+}
+
+.darkMode{
+  background-color: black;
+  color: gainsboro;
 }
 
 img {
@@ -31,3 +43,9 @@ img {
   max-width: 760px;
   
 }
+
+.itemDetailBodyDark{
+ background-color: black;
+  color: white;
+}
+
