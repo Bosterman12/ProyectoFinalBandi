@@ -9,28 +9,32 @@ import { Cart } from './Cart/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { DarkModeProvider } from '../context/DarkModeContext';
-import { getProductos } from './utils/firebase';
+import { CarritoProvider } from '../context/CarritoContext';
+
 
 
 
 import React from 'react';
 
 export const App = () => {
-getProductos()
+
   return (
     
     <>
       <BrowserRouter>
       <DarkModeProvider>
-        <Navbar nombre={"El Surubi"}/>
-        <Routes>
-          <Route path='/' element={<ItemListContainer/>} />
-          <Route path='/category/:idCategoria' element={<ItemListContainer/>} />
-          <Route path='/item/:id' element={<ItemDetailContainer/>} />
-          <Route path='/Checkout' element={<Ckeckout/>}/>
-          <Route path='/Cart' element ={<Cart/>}/>
-        </Routes>
-        <ToastContainer/>
+        <CarritoProvider>
+          <Navbar nombre={"El Surubi"}/>
+            <Routes>
+              <Route path='/' element={<ItemListContainer/>} />
+              <Route path='/category/:idCategoria' element={<ItemListContainer/>} />
+              <Route path='/item/:id' element={<ItemDetailContainer/>} />
+              <Route path='/Checkout' element={<Ckeckout/>}/>
+              <Route path='/Cart' element ={<Cart/>}/>
+            </Routes>
+          <ToastContainer/>
+        </CarritoProvider>
+        
       </DarkModeProvider>
       
       </BrowserRouter>

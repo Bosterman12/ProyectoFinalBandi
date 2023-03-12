@@ -25,6 +25,12 @@
   text-align: center;
 }
 
+.cartWidget{
+  margin-right: 40px;
+  color: white;
+}
+  
+
 .conForm{
   margin-top: 20px;
 }
@@ -62,3 +68,7 @@ img {
   color: white;
 }
 
+.cantCarrito{
+  position: relative;
+  left: 15%;
+}

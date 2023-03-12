@@ -2,11 +2,12 @@ import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { useDarkmodeContext } from '../../context/DarkModeContext';
+import { useCarritoContext } from '../../context/CarritoContext';
 export const ItemDetail = ({prod}) => {
   const{darkMode}=useDarkmodeContext()
-
+  const {addItem} = useCarritoContext()
   const onAdd = (cantidad) => {
-    console.log (cantidad)
+    addItem(prod, cantidad)
   }
     return (
         
