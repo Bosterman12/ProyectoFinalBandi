@@ -9,12 +9,14 @@ import { Cart } from './Cart/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { DarkModeProvider } from '../context/DarkModeContext';
+import { getProductos } from './utils/firebase';
 
 
 
 import React from 'react';
 
 export const App = () => {
+getProductos()
   return (
     
     <>

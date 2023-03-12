@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
-import {consultarBDD} from "../utils/funciones.js"
+import { getProductos } from '../utils/firebase.js';
 import { ItemList } from '../ItemList/ItemList.jsx';
 import { useParams } from 'react-router-dom';
 
@@ -9,14 +9,14 @@ export const ItemListContainer = () => {
    const [productos, setProductos] = useState([]) 
    useEffect (() => {
     if(idCategoria){
-        consultarBDD('../json/productos.json').then (products => {
+        getProductos().then (products => {
         const prods = products.filter(prod => prod.idCategoria === (idCategoria))
         const items = <ItemList prods={prods} plantilla="Item"/>
         
         setProductos(items)
     })
 } else{
-        consultarBDD('./json/productos.json') .then (prods => {
+        getProductos() .then (prods => {
         const items = <ItemList prods={prods} plantilla="Item"/>
         setProductos(items)
     })

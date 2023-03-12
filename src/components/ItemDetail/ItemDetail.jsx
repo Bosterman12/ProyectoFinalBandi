@@ -12,7 +12,7 @@ export const ItemDetail = ({prod}) => {
         
           <div className="row g-0">
   <div className="col-md-4">
-    <img src={`../img/${prod.img}`} className="img-fluid rounded-start" alt="..." />
+    <img src={prod.img} className="img-fluid rounded-start" alt="..." />
   </div>
   <div className="col-md-8">
   <div className={`card-body ${darkMode && "itemDetailBodyDark"}`}>

@@ -8,10 +8,10 @@ export const Categorias = React.memo(() => {
               <button className="btn btn-dark">Articulos de Pesca</button> 
             </a>
             <ul className="dropdown-menu">
-              <li><Link className="dropdown-item" to={'/category/cañas'}>Cañas</Link> </li>
-              <li><Link className="dropdown-item" to={'/category/reeles'}>Reeles</Link></li>
-              <li><Link className="dropdown-item" to={'/category/aparejos'}>Aparejos</Link></li>
-              <li><Link className="dropdown-item" to={'/category/carnadas'}>Carnadas</Link></li>
+              <li><Link className="dropdown-item" to={'/category/1'}>Cañas</Link> </li>
+              <li><Link className="dropdown-item" to={'/category/2'}>Reeles</Link></li>
+              <li><Link className="dropdown-item" to={'/category/3'}>Aparejos</Link></li>
+              <li><Link className="dropdown-item" to={'/category/4'}>Carnadas</Link></li>
               
               
             </ul>

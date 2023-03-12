@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ItemList } from '../ItemList/ItemList';
 export const Cart = () => {
-    const carrito = [{id:1,idCategoria:"cañas",cant: 10, nombre:"Caña",marca: "Okuma",modelo:"Morena power",precio:20350,stock:30,img:"caña-okuma.jpg"}, {id:1,idCategoria:"cañas",cant:5, nombre:"Caña",marca: "Okuma",modelo:"Morena power",precio:20350,stock:30,img:"caña-okuma.jpg"}, {id:1,idCategoria:"cañas",cant:7, nombre:"Caña",marca: "Okuma",modelo:"Morena power",precio:20350,stock:30,img:"caña-okuma.jpg"}]
+    const carrito = [{id:1,idCategoria:"cañas",cant: 10, nombre:"Caña",marca: "Okuma",modelo:"Morena power",precio:20350,stock:30,img:"https://firebasestorage.googleapis.com/v0/b/elsurubiatigrado.appspot.com/o/ca%C3%B1a-okuma.jpg?alt=media&token=e3f2ff3f-3f37-452a-9daf-efcfb8c4d02e"}, {id:1,idCategoria:"cañas",cant:5, nombre:"Caña",marca: "Okuma",modelo:"Morena power",precio:20350,stock:30,img:"https://firebasestorage.googleapis.com/v0/b/elsurubiatigrado.appspot.com/o/ca%C3%B1a-okuma.jpg?alt=media&token=e3f2ff3f-3f37-452a-9daf-efcfb8c4d02e"}, {id:1,idCategoria:"cañas",cant:7, nombre:"Caña",marca: "Okuma",modelo:"Morena power",precio:20350,stock:30,img:"https://firebasestorage.googleapis.com/v0/b/elsurubiatigrado.appspot.com/o/ca%C3%B1a-okuma.jpg?alt=media&token=e3f2ff3f-3f37-452a-9daf-efcfb8c4d02e"}]
     
     return(
         <>
