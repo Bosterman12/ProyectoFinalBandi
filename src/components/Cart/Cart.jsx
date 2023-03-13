@@ -12,7 +12,7 @@ export const Cart = () => {
             carrito.length === 0
             ?
             <>
-            <h2>Carrito vacio</h2>
+            <h2>Para finalizar la compra debe tener productos en el carrito</h2>
             <Link className="nav-link" to={"/"} ><button
              className="btn btn-primary">Continuar comprando</button> </Link>
             </>
