@@ -20,7 +20,7 @@ export const Cart = () => {
             <div className="container cartContainer">
             <ItemList prods={carrito} plantilla="ItemCart"/>
             <div className="divButtons" >
-                <p>Resumen de la compra: {totalPrice()} </p>
+                <p>Resumen de la compra: ${new Intl.NumberFormat('de-DE').format(totalPrice())} </p>
                 <button className="btn btn-danger" onClick={()=> emptyCart() } >Vaciar
                  Carrito</button>
                  <Link className="nav-link" to={"/"}  ><button className="btn btn-dark" >Continuar comprando</button> </Link>
