@@ -72,5 +72,6 @@ img {
 
 .cantCarrito{
   position: relative;
-  left: 15%;
+  right:  55%;
+  color: brown;
 }
