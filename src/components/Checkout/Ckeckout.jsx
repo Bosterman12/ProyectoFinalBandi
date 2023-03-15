@@ -76,7 +76,7 @@ export const Ckeckout = () => {
             <form onSubmit={consultarForm} ref={datosForm}>
                 <div className="mb-3">
                     <label htmlFor="nombre" className="form-label">Nombre y Apellido</label>
-                    <input  type="text" className="form-control" name="nombre"  />
+                    <input  type="text" className="form-control" name="nombre" required />
                 </div>
                 
                 <div className="mb-3">
@@ -91,15 +91,15 @@ export const Ckeckout = () => {
 
                 <div className="mb-3">
                     <label htmlFor="dni" className="form-label">Documento</label>
-                    <input type="number" className="form-control" name="dni" />
+                    <input type="number" className="form-control" name="dni" required/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="celular" className="form-label">Numero telefonico</label>
-                    <input type="number" className="form-control" name="celular" />
+                    <input type="number" className="form-control" name="celular" required />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="direccion" className="form-label">Direccion</label>
-                    <input type="text" className="form-control" name="direccion" />
+                    <input type="text" className="form-control" name="direccion" required/>
                 </div>
                 <button type="submit" className="btn btn-primary" disabled={!isFormValid()} >Finalizar Compra</button>
             </form>
