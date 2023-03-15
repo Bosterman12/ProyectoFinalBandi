@@ -16,6 +16,7 @@
   
   margin-bottom: 3px;
   text-align: center;
+  background-color: seagreen;
 }
 
 .cardBodyDark{
@@ -60,6 +61,7 @@ img {
 .itemDetail{
   margin-top: 20px;
   max-width: 760px;
+  background-color: teal;
   
 }
 

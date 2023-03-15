@@ -4,6 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useCarritoContext } from '../../context/CarritoContext';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
+
+
 //import { createOrdenCompra, updateProducto, getProducto } from '../../utils/firebase';
 import {createOrdenCompra, updateProducto, getProducto} from '../../components/utils/firebase';
 export const Ckeckout = () => {
@@ -46,6 +50,17 @@ export const Ckeckout = () => {
         })
          }
 
+    const [email, setEmail] =  useState("");
+    const [emailConfirmation, setEmailConfirmation] =  useState("");
+
+    const handleEmailChange = (event) => {setEmail(event.target.value);};
+    const handleEmailConfirmationChange = (event) =>{setEmailConfirmation(event.target.value); };
+    const isFormValid = () =>{
+        return email === emailConfirmation && email!=="";
+    };
+
+        
+
     return (
         <>
         {carrito.lenght === 0
@@ -61,13 +76,19 @@ export const Ckeckout = () => {
             <form onSubmit={consultarForm} ref={datosForm}>
                 <div className="mb-3">
                     <label htmlFor="nombre" className="form-label">Nombre y Apellido</label>
-                    <input type="text" className="form-control" name="nombre" />
+                    <input  type="text" className="form-control" name="nombre"  />
                 </div>
                 
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email</label>
-                    <input type="email" className="form-control" name="email" />
+                    <input type="email" className="form-control" name="email" value={email} onChange={handleEmailChange} required />
                 </div>
+
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">Confirmar Email</label>
+                    <input type="email" className="form-control" name="email" value={emailConfirmation} onChange={handleEmailConfirmationChange} required  />
+                </div>
+
                 <div className="mb-3">
                     <label htmlFor="dni" className="form-label">Documento</label>
                     <input type="number" className="form-control" name="dni" />
@@ -80,7 +101,7 @@ export const Ckeckout = () => {
                     <label htmlFor="direccion" className="form-label">Direccion</label>
                     <input type="text" className="form-control" name="direccion" />
                 </div>
-                <button type="submit" className="btn btn-primary">Finalizar Compra</button>
+                <button type="submit" className="btn btn-primary" disabled={!isFormValid()} >Finalizar Compra</button>
             </form>
         </div>
         }
